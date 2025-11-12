@@ -101,6 +101,7 @@ class FederatedClient:
                 self.train_loader,
                 desc=f"Client {self.client_id} Epoch {epoch + 1}/{fed_cfg.local_epochs}",
                 leave=False,
+                mininterval=10,
             )
             for batch in pbar:
                 inputs = batch["inputs"].to(self.device)
