@@ -28,12 +28,7 @@ All heavy computations rely on PyTorch with CUDA support when available and fall
 python examples/demo.py
 ```
 
-The script:
-
-1. Seeds all random number generators for reproducibility.
-2. Simulates five personalised CGM clients in mmol/L with irregular sampling.
-3. Trains the FedLoNS model for several federated rounds using tqdm progress bars.
-4. Prints per-round aggregated metrics (training loss, MAE, RMSE, Peak-Error) and final per-client evaluation statistics.
+The script do all experiments in the paper.
 
 Configuration is expressed through dataclasses, making it straightforward to customise hyper-parameters directly in the script or from user code.
 
